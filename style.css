@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mad Libs Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Let's Play Mad Libs!</h1>
+    <p>Fill in the blanks below, and we’ll create a fun story for you!</p>
+  </header>
+
+  <main>
+    <form action="/submit" method="POST" class="madlib-form">
+      <label for="noun">Noun:</label>
+      <input type="text" id="noun" name="noun" required placeholder="Enter a noun">
+
+      <label for="verb">Verb:</label>
+      <input type="text" id="verb" name="verb" required placeholder="Enter a verb">
+
+      <label for="adjective">Adjective:</label>
+      <input type="text" id="adjective" name="adjective" required placeholder="Enter an adjective">
+
+      <label for="plural-noun">Plural Noun:</label>
+      <input type="text" id="plural-noun" name="pluralNoun" required placeholder="Enter a plural noun">
+
+      <label for="adverb">Adverb:</label>
+      <input type="text" id="adverb" name="adverb" required placeholder="Enter an adverb">
+
+      <button type="submit">Generate Story!</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>Last updated: <span id="lastModified"></span></p>
+  </footer>
+
+  <script type="text/javascript">
+    document.getElementById('lastModified').textContent = document.lastModified;
+  </script>
+</body>
+</html>
